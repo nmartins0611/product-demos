@@ -2,8 +2,9 @@
 - name: install and configure insights agent on all specified nodes
   hosts: "{{ HOSTS | default('web') }}"
   tasks:
-    - name: add subscription 
-      community.general.redhat_subscription:
+  
+    - name: adding subscriptions
+      subscription-manager:
        state: present
        username: nmart11@protonmail.com
        password: "!@mL3g10n@2020"
