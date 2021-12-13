@@ -10,14 +10,14 @@
        password: "!@mL3g10n@2020"
        auto_attach: true
        
-    - include_role:
-        name: RedHatInsights.insights-client
-      vars:
-        redhat_portal_username: "{{ insights_user }}"
-        redhat_portal_password: "{{ insights_password }}"
-        insights_display_name: "{{ inventory_hostname }}"
-      when: ansible_os_family == 'RedHat'
+#    - include_role:
+#        name: RedHatInsights.insights-client
+#      vars:
+#        redhat_portal_username: "{{ insights_user }}"
+#        redhat_portal_password: "{{ insights_password }}"
+#        insights_display_name: "{{ inventory_hostname }}"
+#      when: ansible_os_family == 'RedHat'
 
-    - name: print info to terminal window
-      debug:
-        msg: "Red Hat Insights is installed and configured for {{ inventory_hostname }}"
+#    - name: print info to terminal window
+#      debug:
+#        msg: "Red Hat Insights is installed and configured for {{ inventory_hostname }}"
