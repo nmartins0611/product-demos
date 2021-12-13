@@ -3,11 +3,12 @@
   hosts: "{{ HOSTS | default('web') }}"
   tasks:
   
-    - name: adding subscriptions
-      subscription-manager:
+    - name: Register as user (joe_user) with password (somepass) and auto-subscribe to available content.
+      redhat_subscription:
        state: present
-       username: nmart11@protonmail.com
+       username: "nmart11@protonmail.com"
        password: "!@mL3g10n@2020"
+       auto_attach: true
        
     - include_role:
         name: RedHatInsights.insights-client
